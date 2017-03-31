@@ -7,8 +7,9 @@ import { Food } from './food.model'
   <div class="container">
     <h1>Meal Tracker</h1>
 
-    <food-list [childFoodList]="parentFoodList"></food-list>
+    <food-list [childFoodList]="parentFoodList" (clickSender)="editFood($event)"></food-list>
     <add-food (newFoodSender)="addFood($event)"></add-food>
+    <edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="endEdit()"></edit-food>
   </div>
   `
 })
@@ -21,7 +22,17 @@ export class AppComponent {
     new Food('Ben & Jerry\'s Strawberry Cheesecake Ice Cream', 'I didn\'t mean to', 520, 'dessert')
   ];
 
+  selectedFood = null;
+
   addFood(newFoodFromChild: Food) {
     this.parentFoodList.push(newFoodFromChild);
+  }
+
+  editFood(foodToEdit: Food) {
+    this.selectedFood = foodToEdit;
+  }
+
+  endEdit() {
+    this.selectedFood = null;
   }
 }
