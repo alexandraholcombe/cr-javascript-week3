@@ -8,9 +8,10 @@ import { Food } from './food.model';
   <div class="wrapper">
     <div class="food-item" *ngFor="let currentFood of childFoodList | calorieLevel:filterByCalories">
       <h3>{{currentFood.name}}</h3>
-      <p><span class="calories">{{currentFood.calories}}</span></p>
+
+      <p class="col-xs-6"><span class="meal">{{currentFood.meal}}</span></p>
+      <p class="col-xs-6"><span class="calories">{{currentFood.calories}} calories</span></p>
       <p><span class="details">{{currentFood.details}}</span></p>
-      <p><span class="meal">{{currentFood.meal}}</span></p>
       <button class="btn" (click)="editButtonHasBeenClicked(currentFood)">Edit</button>
     </div>
   </div>

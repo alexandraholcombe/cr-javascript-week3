@@ -3,14 +3,19 @@
 
 $green: #72980b;
 $lGreen: #a6c74e;
+$notWhite: #f7f7f7;
+
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f7f7f7;
+  background-color: $notWhite;
+    background-size: cover;
+  background-repeat: none;
 }
 
-// .container {
-//   background-color: #72980b;
-// }
+.main {
+  background-color: $notWhite;
+  padding: 0 60px;
+}
 
 .header-container {
   background-color: white;
@@ -20,6 +25,7 @@ body {
   height: 30%;
   width: 100%;
   position: relative;
+  padding: 0 60px;
   .container {
     background-color: transparent;
   }
@@ -58,7 +64,7 @@ select.form-control {
   box-sizing: border-box;
   border: 10px solid $green;
   border-radius: 20px;
-  width: 31%;
+  width: 22%;
   margin: 20px 0;
   padding: 10px 20px;
   background-color: $lGreen;
