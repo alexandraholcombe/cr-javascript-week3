@@ -68,11 +68,41 @@ select.form-control {
   margin: 20px 1.5%;
   padding: 10px 20px;
   background-color: $lGreen;
+  position: relative;
+  .details {
+    padding: 20px;
+    span:first-of-type{
+      display: block;
+      font-size: 20px;
+      margin-left: -20px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: bold;
+    }
+  }
+  .info-tainer {
+    margin: 0 1%;
+    margin-bottom: 30px;
+  }
+  .col-xs-6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    &:last-of-type{
+      text-align: right;
+    }
+  }
   h3 {
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 10px;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+  }
+  button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 5px;
   }
 }
