@@ -8,19 +8,19 @@ import { Food } from './food.model';
     <h2>Add New Food</h2>
     <div class="form-group">
      <label>Food</label>
-     <input #newFood>
+     <input #newFood required>
     </div>
     <div class="form-group">
      <label>Meal</label>
-     <input #newMeal>
+     <input #newMeal required>
     </div>
     <div class="form-group">
      <label>Details</label>
-     <input #newDetails>
+     <input #newDetails required>
     </div>
     <div class="form-group">
      <label>Calories</label>
-     <input type="number" #newCalories>
+     <input type="number" #newCalories required>
     </div>
     <button class="btn"  (click)="submitForm(newFood.value, newDetails.value, newCalories.value, newMeal.value); newFood.value=''; newDetails.value=''; newCalories.value=''; newMeal.value='';">Add Food</button>
   </div>
