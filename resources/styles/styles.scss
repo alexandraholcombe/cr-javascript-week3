@@ -34,7 +34,7 @@ body {
 .wrapper{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #header {
@@ -65,7 +65,7 @@ select.form-control {
   border: 10px solid $green;
   border-radius: 20px;
   width: 22%;
-  margin: 20px 0;
+  margin: 20px 1.5%;
   padding: 10px 20px;
   background-color: $lGreen;
   h3 {

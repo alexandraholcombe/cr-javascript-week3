@@ -19,17 +19,11 @@ import { Food } from './food.model';
 })
 
 export class FoodListComponent {
+  @Input() filterByCalories: string;
   @Input() childFoodList: Food[];
   @Output() clickSender = new EventEmitter();
 
-  filterByCalories: string = "allFoods";
-
   editButtonHasBeenClicked(foodToEdit: Food) {
     this.clickSender.emit(foodToEdit);
-  }
-
-  onChange(optionFromMenu) {
-    console.log("change");
-    this.filterByCalories = optionFromMenu;
   }
 }
