@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:400,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+// body {
+//   background-image: url('https://userscontent2.emaze.com/images/866ce458-4d10-4565-ba9d-be791d6c6ce9/dd86b07ff77fb73b741fea6f3de7a4d5.jpg');
+//   background-position: 50% 100px;
+//   background-repeat: no-repeat;
+// }
+
+.header-container {
+  background-color: white;
+  background-image: url('https://userscontent2.emaze.com/images/866ce458-4d10-4565-ba9d-be791d6c6ce9/dd86b07ff77fb73b741fea6f3de7a4d5.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 30%;
+  width: 100%;
+  position: relative;
+}
+
+
+#header {
+  position: absolute;
+  font-family: 'Fredoka One', sans-serif;
+  text-transform: lowercase;
+  bottom: 0px;
+  font-size: 90px;
+  color: white;
+  text-shadow: 3px 3px rgba(20, 20, 20, 0.5);
+  i {
+    font-size: 70px;
+    position: relative;
+    bottom: 8px;
+    margin-right: 15px;
+  }
+}

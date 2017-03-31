@@ -4,8 +4,12 @@ import { Food } from './food.model'
 @Component ({
   selector: 'app-root',
   template: `
+  <div class="header-container">
+    <div class="container">
+      <h1 id="header"><i class="fa fa-cutlery" aria-hidden="true"></i>Foodr</h1>
+    </div>
+  </div>
   <div class="container">
-    <h1>Meal Tracker</h1>
 
     <food-list [childFoodList]="parentFoodList" (clickSender)="editFood($event)"></food-list>
     <add-food (newFoodSender)="addFood($event)"></add-food>
