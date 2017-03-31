@@ -17,8 +17,14 @@ import { Food } from './food.model'
   <div class="main">
 
     <food-list [childFoodList]="parentFoodList" (clickSender)="editFood($event)" [filterByCalories]="filterByCalories"></food-list>
-    <add-food (newFoodSender)="addFood($event)"></add-food>
-    <edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="endEdit()"></edit-food>
+    <div class="row">
+      <div class="col-sm-6">
+        <add-food (newFoodSender)="addFood($event)"></add-food>
+      </div>
+      <div class="col-sm-6">
+        <edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="endEdit()"></edit-food>
+      </div>
+    </div>
   </div>
   `
 })
