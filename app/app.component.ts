@@ -8,6 +8,7 @@ import { Food } from './food.model'
     <h1>Meal Tracker</h1>
 
     <food-list [childFoodList]="parentFoodList"></food-list>
+    <add-food (newFoodSender)="addFood($event)"></add-food>
   </div>
   `
 })
@@ -19,4 +20,8 @@ export class AppComponent {
     new Food('Crock Pot Chicken Lasagna', 'Small servings, ate 2', 522, 'dinner'),
     new Food('Ben & Jerry\'s Strawberry Cheesecake Ice Cream', 'I didn\'t mean to', 520, 'dessert')
   ];
+
+  addFood(newFoodFromChild: Food) {
+    this.parentFoodList.push(newFoodFromChild);
+  }
 }
