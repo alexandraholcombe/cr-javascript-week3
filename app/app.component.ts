@@ -7,12 +7,17 @@ import { Food } from './food.model'
   <div class="header-container">
     <div class="container">
       <h1 id="header"><i class="fa fa-cutlery" aria-hidden="true"></i>Foodr</h1>
+      <select class="form-control pull-right" (change)="onChange($event.target.value)">
+         <option value="allFoods">Show All</option>
+         <option value="highCalorie">Show High Calorie Foods</option>
+         <option value="lowCalorie">Show Low Calorie Foods</option>
+       </select>
     </div>
   </div>
-  <div class="container">
+  <div class="container main">
 
     <food-list [childFoodList]="parentFoodList" (clickSender)="editFood($event)"></food-list>
-    <add-food (newFoodSender)="addFood($event)"></add-food>
+    <!-- <add-food (newFoodSender)="addFood($event)"></add-food> -->
     <edit-food [childSelectedFood]="selectedFood" (doneButtonClickedSender)="endEdit()"></edit-food>
   </div>
   `
