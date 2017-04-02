@@ -30,12 +30,7 @@
   * food-list (all foods)
   * add-food (create new food)
   * edit-food (change new food)
-  * Question-detail (full question for question route)
-  * New-question (form)
-  * New-answer (form)
-  * Answer-tile (all details)
-  * Update-question (probably modal)
-
+  
 > **Models**  
   * Food  
 
